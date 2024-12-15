@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riddle Generator</title>
+  <link rel="stylesheet" href="style.css"> <!-- Link to your CSS -->
+</head>
+<body>
+  <!-- Header Navigation -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="scratch.html">Scratch Page</a></li>
+        <li><a href="app.html">App</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Riddle Generator -->
+  <main>
+    <h1>Riddle Generator</h1>
+    <p id="riddle">Click the button to get a riddle!</p>
+    <button onclick="generateRiddle()">Get Riddle</button>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 My Professional Website</p>
+  </footer>
+
+  <!-- JavaScript for Riddle Generator -->
+  <script>
+    const riddles = [
+      { question: "What has keys but can’t open locks?", answer: "A piano." },
+      { question: "What can travel around the world while staying in the corner?", answer: "A stamp." },
+      { question: "What has to be broken before you can use it?", answer: "An egg." },
+      { question: "What has a heart that doesn’t beat?", answer: "An artichoke." }
+    ];
+
+    function generateRiddle() {
+      const randomRiddle = riddles[Math.floor(Math.random() * riddles.length)];
+      document.getElementById("riddle").textContent = `${randomRiddle.question} Answer: ${randomRiddle.answer}`;
+    }
+  </script>
+</body>
+</html>
